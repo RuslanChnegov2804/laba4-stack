@@ -81,7 +81,11 @@ cd python
 pytest -v
 
 ## Покрытие тестамиh
+
+```bash
 pytest --cov=stack --cov-report=term-missing --cov-report=html
+```
+
 ## Отчет
 python/htmlcov/index.html
 

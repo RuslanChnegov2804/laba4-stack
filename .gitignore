@@ -1,11 +1,17 @@
+#macOS
 .DS_Store
 
+#C++/CMake
 build/
+build-coverage/
 cmake-build-*/
+coverage.info
+coverage-report/
 
+#Python
+.venv/
 __pycache__/
 *.pyc
 .pytest_cache/
 .coverage
 htmlcov/
-./venv/

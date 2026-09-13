@@ -15,6 +15,7 @@ exit          - выйти из программы
 
 ## Структура проекта
 
+```text
 laba4-stack/
 ├── cpp/
 │   ├── include/
@@ -37,7 +38,8 @@ laba4-stack/
 ├── CMakeLists.txt
 ├── requirements.txt
 ├── .gitignore
-└── README.m
+└── READMdE.m
+```
 
 #C++
 ##Сборка

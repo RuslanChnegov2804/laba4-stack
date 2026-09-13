@@ -57,3 +57,18 @@ TEST(StackTest, TopFromEmptyStackThrowsException) {
 
     EXPECT_THROW(stack.top(), std::underflow_error);
 }
+TEST(StackTest, PrintShowsElementsInCorrectOrder) {
+    Stack stack;
+
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+
+    testing::internal::CaptureStdout();
+
+    stack.print();
+
+    std::string output = testing::internal::GetCapturedStdout();
+
+    EXPECT_EQ(output, "10 20 30\n");
+}

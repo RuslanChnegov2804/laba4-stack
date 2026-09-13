@@ -38,24 +38,36 @@ laba4-stack/
 ├── CMakeLists.txt
 ├── requirements.txt
 ├── .gitignore
-└── READMdE.m
+└── REE.md
 ```
 
 #C++
+
 ##Сборка
+
+```bash
 cmake -S . -B build
 cmake --build build
+```
 
 ##Запуск
+
+```bash
 ./build/stack_app
+```
 
 ## Тесты
-
 Используется GoogleTest.
 
+```bash
 ctest --test-dir build --output-on-failure
+```
+
 или:
+
+```bash
 ./build/stack_tests
+```
 
 ## Покрытие тестами
 
@@ -64,31 +76,48 @@ ctest --test-dir build --output-on-failure
 # Python
 
 ## Запуск
+
+```bash
 python3 python/main.py
+```
 
 ## Создание виртуального окружения
+
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 ## Установка зависимостей
+
+```bash
 python -m pip install -r requirements.txt
+```
 
 ## Тесты
 Перейти в папку Python:
+
+```bash
 cd python
+```
 
 Запустить:
-pytest -v
 
-## Покрытие тестамиh
+```bash
+pytest -v
+```
+
+## Покрытие тестами
 
 ```bash
 pytest --cov=stack --cov-report=term-missing --cov-report=html
 ```
 
 ## Отчет
-python/htmlcov/index.html
 
+```text
+python/htmlcov/index.html
+```
 
 
 

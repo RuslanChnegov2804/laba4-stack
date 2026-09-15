@@ -16,6 +16,8 @@ endif()
 add_executable(stack_app
     cpp/src/main.cpp
     cpp/src/stack.cpp
+    cpp/src/queue.cpp
+    cpp/src/tree.cpp
 )
 
 target_include_directories(stack_app PRIVATE
@@ -35,7 +37,11 @@ FetchContent_MakeAvailable(googletest)
 #Тесты
 add_executable(stack_tests
     cpp/tests/test_stack.cpp
+    cpp/tests/test_queue.cpp
+    cpp/tests/test_tree.cpp
     cpp/src/stack.cpp
+    cpp/src/queue.cpp
+    cpp/src/tree.cpp
 )
 
 target_include_directories(stack_tests PRIVATE

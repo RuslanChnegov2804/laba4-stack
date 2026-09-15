@@ -1,8 +1,9 @@
-# Лабораторная работа 4(Stack)
+# Лабораторная работа 4(СТЭК, ОЧЕРЕДЬ, ДЕРЕВО)
 
-Реализованно на: C++, Python
+Реализованно на: C++
 
 ## Консольные команды: 
+СТЭК:
 spush <число> - добавить число в стек
 spop          - удалить верхний элемент
 stop          - показать верхний элемент
@@ -10,8 +11,27 @@ sprint        - вывести стек
 ssize         - показать размер стека
 sempty        - проверить, пуст ли стек
 sclear        - очистить стек
-help          - показать список команд
-exit          - выйти из программы
+
+ОЧЕРЕДЬ:
+qpush <число>
+qpop
+qfront
+qprint
+qsize
+qempty
+qclear
+
+ДЕРЕВО:
+binsert <число>
+bsearch <число>
+bprint
+bsize
+bempty
+bclear
+
+ОБЩИЕ КОМАНДЫ:
+help
+exit
 
 ## Структура проекта
 
@@ -19,29 +39,25 @@ exit          - выйти из программы
 laba4-stack/
 ├── cpp/
 │   ├── include/
-│   │   └── stack.h
+│   │   ├── stack.h
+│   │   ├── queue.h
+│   │   └── tree.h
 │   ├── src/
 │   │   ├── main.cpp
-│   │   └── stack.cpp
+│   │   ├── stack.cpp
+│   │   ├── queue.cpp
+│   │   └── tree.cpp
 │   └── tests/
-│       └── test_stack.cpp
-│
-├── python/
-│   ├── main.py
-│   ├── stack.py
-│   └── test_stack.py
-│
+│       ├── test_stack.cpp
+│       ├── test_queue.cpp
+│       └── test_tree.cpp
 ├── .github/
 │   └── workflows/
 │       └── coverage.yml
-│
 ├── CMakeLists.txt
-├── requirements.txt
 ├── .gitignore
-└── REE.md
-```
-
-#C++
+└── README.md
+```+
 
 ##Сборка
 
@@ -72,52 +88,6 @@ ctest --test-dir build --output-on-failure
 ## Покрытие тестами
 
 Для C++ используется: gcov; lcov; genhtml.
-
-# Python
-
-## Запуск
-
-```bash
-python3 python/main.py
-```
-
-## Создание виртуального окружения
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-## Установка зависимостей
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-## Тесты
-Перейти в папку Python:
-
-```bash
-cd python
-```
-
-Запустить:
-
-```bash
-pytest -v
-```
-
-## Покрытие тестами
-
-```bash
-pytest --cov=stack --cov-report=term-missing --cov-report=html
-```
-
-## Отчет
-
-```text
-python/htmlcov/index.html
-```
 
 
 
